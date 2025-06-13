@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>esoterIQ | Obscurion's Vaguerithmic Engine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>esoterIQ</h1>
+    <p class="tagline">Powered by magIQ8™: Trendlines for the Mystically Inclined</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>What is esoterIQ?</h2>
+    <p>
+      <strong>esoterIQ</strong> is our proprietary <em>vaguerithmic</em> engine, a revolutionary approach to data
+      interpretation that rejects traditional clarity in favor of intuitive abstraction.
+      With esoterIQ, we go beyond data analysis and into data divination.
+    </p>
+  </section>
+
+  <section>
+    <h2>The magIQ8™ Codebase</h2>
+    <p>
+      Behind the scenes, <strong>magIQ8™</strong> fuels the magic. This trademarked system draws inspiration
+      from chaos theory, cartomancy, and machine unlearning. It renders visualizations as
+      hazy lines, swirling glyphs, and gestural approximations of trends that might exist.
+    </p>
+  </section>
+
+  <section>
+    <h2>Sample Visualization</h2>
+    <canvas id="hazyChart" width="600" height="300" style="width: 100%; border: 1px solid #444;"></canvas>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Obscurion. esoterIQ and magIQ8™ are trademarks of Obscurion Labs.</p>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById('hazyChart');
+    const ctx = canvas.getContext('2d');
+
+    function drawHazyLine() {
+      ctx.strokeStyle = 'rgba(0, 255, 204, 0.2)';
+      ctx.lineWidth = 2;
+
+      for (let i = 0; i < 10; i++) {
+        ctx.beginPath();
+        let x = 0;
+        let y = 150 + Math.random() * 50 - 25;
+        ctx.moveTo(x, y);
+        for (x = 0; x <= canvas.width; x += 10) {
+          y += Math.random() * 20 - 10;
+          ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      }
+    }
+
+    drawHazyLine();
+  </script>
+</body>
+</html>
